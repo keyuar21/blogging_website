@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        /* Additional margin can be applied here if needed */
+        .carousel-item {
+            height: 70vh; /* Full viewport height */
+        }
+
+        .carousel-item svg {
+            width: 100%;
+            height: 100%;
+        }
+        .d-flex {
+  align-items: flex-start; /* Align content and image to the top */
+}
+
+.col {
+  flex-grow: 1; /* Allow the content column to grow based on text */
+}
+
+.col-auto {
+  flex-shrink: 0; /* Ensure the image keeps its width without shrinking */
+}
+    
+        body {
+            background-color:#fbfcfc 
+            ;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .post-container {
+            margin-top: 40px;
+        }
+
+        .cardssection{
+          background-color:#fbfcfc   ;
+        }
+
+        .post {
+            display: flex;
+            background:#5f6a6a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px  #0a0a0a;
+            transition: transform 0.3s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+        }
+
+
+
+
+
+        .post-text {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .post-text strong {
+            font-size: 14px;
+            color: #25f325;
+        }
+
+        .post-text h3 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #92fe53;
+        }
+
+        .post-text p {
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .post-text .text-body-secondary {
+            color: #ffffff;
+        }
+
+        .post-image {
+            width: 100%;
+            height: 100%;
+            border-left: 4px solid #ddd;
+            background-color: #f0f0f0;
+        }
+
+        .post-image img {
+             max-width: 300px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: auto;
+        }
+        .date{
+          color: #ffffffec;
+        }
+
+        @media (max-width: 768px) {
+            .post {
+                flex-direction: column;
+            }
+
+            .post-image {
+                width: 100%;
+                height: 200px;
+                border-left: none;
+                border-top: 4px solid #ddd;
+            }
+        }
+
+    #aboutpage{
+      font-family: serif;
+      box-shadow: 2px 2px 2px 1px black;
+ 
+          }
+
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <div class=" bg-dark border-bottom border-body" data-bs-theme="dark">
+      <header class="border-bottom lh-1 py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+    
+          <div class="col-4 pt-1">
+            <a class="btn btn-sm light ms-3" href="/create">Create</a>
+          </div>
+        
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">CyberTech</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="link-light" href="#" aria-label="Search">
+              <a class="btn btn-sm light ms-3" href="/me">My blogs </a>
+            </a>
+            <a class="btn btn-sm btn-outline-light ms-1 me-4" href="/login">Sign up</a>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- crousel-->
+    <!-- Add margin-top class mt-5 to shift the carousel down -->
+    <div id="myCarousel" class="carousel slide  " data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class="active" aria-current="true" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+            
+          <svg class="bd-placeholder-img" width="100%" height="100%" src="https://cdn-cybersecurity.att.com/blog-content/Blog-Images/tile/thought-leadership-768x427.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <image href="https://www.soledu.net/en/app/uploads/2022/01/technology-security-concept-safety-digital-protection-system.jpg" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"></image>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Cybersecurity Threats: Top Risks Facing Your Startup </h1>
+              <p>Sep 24, 2024   |   David Balaban</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Read more </a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <image href="https://thedatascientist.com/wp-content/uploads/2023/12/How-is-quantum-computing-impacting-the-cybersecurity-industry.webp" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"></image>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Quantum Computing and Cybersecurity - Preparing for a New Age of Threats </h1>
+              <p>Sep 23, 2024   |   Theodoros Karasavvas</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Read more </a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <image href="https://cdn-cybersecurity.att.com/blog-content/Blog-Images/tile/partner_tile.jpg" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"></image>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Introducing LevelBlue’s 24/7 Managed Threat Detection and Response Service for Government  
+            </h1>
+              <p>Sep 18, 2024   |   Michael Vaughn</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Read more </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">السابق</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">التالي</span>
+      </button>
+    </div>
+
+    <!-- cards -->
+    <div class="cardssection mt-5">
+      <div class="container post-container ">
+        <div class="row ">
+          <!-- Static Blog Post -->
+          <div class="col-md-6 mb-4 mt-5">
+            <div class="post d-flex">
+              <!-- Blog Text Section -->
+              <div class="post-text">
+                <strong>Country</strong>
+                <h3>Cloudflare Warns of India-Linked Hackers Targeting South and East Asian Entities</h3>
+                <div class=" date text-body-secondary"> 26 Sep </div>
+                <p>An advanced threat actor with an India nexus has been observed using multiple cloud service providers to facilitate credential harvesting, malware delivery, and command-and-control (C2).
+    
+                  Web infrastructure and security company Cloudflare is tracking the activity under the name SloppyLemming, which is also called Outrider Tiger and Fishing Elephant.
+    
+                  "Between late 2022 to present, SloppyLemming has routinely used Cloudflare Workers, likely as part of a broad espionage campaign targeting South and East Asian countries," Cloudflare said in an analysis.
+                </p>
+              </div>
+    
+              <!-- Blog Image Section -->
+              <div class="post-image">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqnUG8d-PvfJUUjmw-yRAkOZs44gbZ_6HpuO-fWQu819YbmNYqewqhCzMUfx8WQVn4T932krG26_2WoAmcZLFNSqYqVWuOjjgUxwsu6m73oEzorVmrEuXTIl0ylIMUuM07dk3I3wCgq9rZEIuBCDwDaJ_2JaTdMepCpM72Yh5Rk9-f3hGqx9hKM3BDlEIk/s728-rw-e365/indian0-hackers.png" alt="image">
+              </div>
+            </div>
+          </div>
+
+           <!-- Static Blog Post -->
+           <div class="col-md-6 mb-4 mt-5">
+            <div class="post d-flex">
+              <!-- Blog Text Section -->
+              <div class="post-text">
+                <strong>Cybersecurity</strong>
+                <h3>Cybersecurity Researchers Warn of New Rust-Based Splinter Post-Exploitation Tool</h3>
+                <div class="text-body-secondary"> 26 Sep </div>
+                <p>Cybersecurity researchers have flagged the discovery of a new post-exploitation red team tool called Splinter in the wild.
+                  Palo Alto Networks Unit 42 shared its findings after it discovered the program on several customers' systems.
+                  "It has a standard set of features commonly found in penetration testing tools and its developer created it using the Rust programming language," Unit 42's Dominik Reichel said. "While Splinter is not as advanced as other well-known post-exploitation tools like Cobalt Strike, it still presents a potential threat to organizations if it is misused."
+                </p>
+              </div>
+    
+              <!-- Blog Image Section -->
+              <div class="post-image">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivIUFaqYClnCCCd931zR7KSCdQMkvmwBkMnu5i95H6QI8UI5D8NpSAQtsBkHunIwaJQR0IWP2O9tI2dWcCLqfCPBhxSVaFHAA9ma9D9SLac_8tFJoQehTGHC0bH9Q0OHwsqrFRNnBBIC2C2dHIcP_nfGzf9RA2zE7lCh5voxrH_5e279JTYNncnqAQCGXk/s728-rw-e365/hacking-tool.png" alt="image">
+              </div>
+            </div>
+          </div>         
+    
+          <!-- Dynamic Blog Posts -->
+          <% posts.forEach(post => { %>
+          <div class="col-md-6 mb-4 mt-5">
+            <div class="post d-flex">
+              <!-- Blog Text Section -->
+              <div class="post-text">
+                <strong><%= post.about %></strong>
+                <h3><%= post.title %></h3>
+                <div class="text-body-secondary"><%= post.date %></div>
+                <p><%= post.content %></p>
+              </div>
+    
+              <!-- Blog Image Section -->
+              <div class="post-image">
+                <img src="<%= post.image %>" alt="<%= post.title %>" >
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+    
+ 
+    
+  <!--more blogs -->
+  <div class="container">
+      <div class="row g-5">
+          <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom" style="background-color:#f8fbe235; ">
+              More Blogs :
+             </h3>
+  
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1" style="background-color: #f8fbe235;">CrowdStrike boss apologises for global IT outage</h2>
+          <p class="blog-post-meta">September 26, 2024 by <a href="#">Mark</a></p>
+  
+          <p>CrowdStrike apologises for global IT outage that affected 8.5m computers. </p>
+          <hr>
+          <p>Cybersecurity company CrowdStrike faced its biggest grilling yet over its role in July's mass global IT outage in Congress on Tuesday.
+            Adam Meyers, a senior executive at the company, appeared before a US congressional committee to answer questions about its faulty software update that disabled millions of PCs on 19 July.
+            The incident knocked payment services offline, grounded flights and forced some hospitals to cancel appointments and delay operations.
+            Mr Meyers said the firm was "deeply sorry" for the outage that affected millions of people and is "determined to prevent it from happening again".
+            CrowdStrike described the outage as the result of a “perfect storm”.
+            Lawmakers on the House of Representatives cybersecurity subcommittee pressed Mr Meyers on how it occurred in the first place.
+            "A global IT outage that impacts every sector of the economy is a catastrophe that we would expect to see in a movie," said Mark Green, chairman of the House Homeland Security Committee, in his opening remarks.
+            The Tennessee representative likened the widespread impact of CrowdStrike’s faulty content update to an attack “we would expect to be carefully executed by a malicious and sophisticated nation-state actor”.
+            Instead “the largest IT outage in history was due to a mistake”, he said.
+            Mr Meyers said the company would continue to act on and share "lessons learned" from the incident to make sure it would not happen again.
+            Among the questions directed at Mr Meyers during the 90-minute hearing were technical queries about whether the company's software should have access to core parts of device operating systems.
+            But there were also more general questions about artificial intelligence (AI) and its potential impact on cybersecurity.
+            Congressman Carlos Gimenez asked about the threat of AI writing malicious code.
+            Mr Meyers said he thought the tech was “not there yet" but added that every day it "gets better".</p>
+          <hr>
+        
+        </article>
+  
+          
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1" style="background-color: #f8fbe235;">Critical Unauthenticated RCE Flaw Impacts all GNU/Linux systems</h2>
+          <p class="blog-post-meta">September 26, 2024 by <a href="#">Dhivya</a></p>
+  
+          <p>A critical unauthenticated Remote Code Execution (RCE) vulnerability has been discovered, impacting all GNU/Linux systems. </p>
+          <hr>
+          <p>Severity Confirmed by Major Distributors
+            Leading Linux distributors such as Canonical and RedHat have confirmed the flaw’s severity, rating it 9.9 out of 10. This indicates the potential for catastrophic damage if exploited.
+            
+            However, despite this acknowledgment, no working fix is still available. Developers remain embroiled in debates over whether some aspects of the vulnerability impact security.
+            
+            Frustrations and Challenges in Disclosure
+            According to the Thread Reader, the researcher who uncovered this flaw has expressed deep frustration over handling the disclosure process.
+            
+            Having dedicated three weeks of sabbatical to this effort, they report being met with resistance and patronization from developers reluctant to accept flaws in their code.
+            
+            The researcher notes that progress has been slow despite providing multiple proofs of concept (PoCs) systematically disproving developers’ assumptions. 
+            
+            This sentiment underscores the critical need for responsible vulnerability handling. The unfolding situation serves as a stark example of how not to handle security disclosures.
+            
+            The researcher acknowledges developers’ challenges but emphasizes promptly addressing vulnerabilities. They also commend Canonical for their efforts in mediating and assisting from the beginning. 
+            
+            As full disclosure approaches, swift action becomes increasingly urgent. The Linux community and its users worldwide await effective solutions to safeguard their systems against this significant threat.</p>
+          <hr>
+        
+        </article>
+
+                  
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1" style="background-color: #f8fbe235;">NEXCOM is Set to Shape the Future of Cybersecurity at GITEX, Dubai
+          </h2>
+          <p class="blog-post-meta">September 26, 2024 by <a href="#">gargee</a></p>
+  
+          <p>
+            NEXCOM's advanced cybersecurity and AI solutions help to build secure and intelligent networks across industries </p>
+          <hr>
+          <p>TAIPEI, Sept. 25, 2024 /PRNewswire/ -- NEXCOM, a leading global supplier of network appliances, is excited to make its presence at GITEX 2024 in Dubai. At NEXCOM's booth H21-03, Hall 21, visitors will have the exclusive opportunity to witness some of NEXCOM's most advanced cybersecurity and AI products, with several making their global debut at the event.NEXCOM will also exhibit its appliances for factory automation and data collection. These smart devices are designed to streamline and secure IIoT environments, optimize operations, and improve productivity. Dedicated OT security product line allows seamless integration of OT and IT networks, and ensures robust protection of critical assets, both wired and wireless.
+
+            All GITEX attendees are invited to explore NEXCOM's innovative product lineup and experience firsthand how its technologies are driving the future of cybersecurity and AI. NEXCOM's booth H21-03, Hall 21 is a must-visit destination, offering a unique look into the future of secure and intelligent networks.
+            
+            About NEXCOM
+            
+            Founded in 1992 and headquartered in Taipei, Taiwan, NEXCOM integrates its diverse capabilities and operates six global businesses, including the Network and Communication Solutions (NCS) unit. NCS focuses on the latest network technology and helps to build reliable network infrastructure, by delivering professional design and manufacturing services for customers all over the world. NCS's network application platform is widely adopted in Cyber Security, Load Balancing, uCPE, SD-WAN, SASE, Edge Computing, Storage, NVR, and other network applications for businesses of all sizes.</p>
+          <hr>
+        
+        </article>
+
+                  
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1" style="background-color: #f8fbe235;">Eclipse working group to address cybersecurity, AI regulations</h2>
+          <p class="blog-post-meta">September 26, 2024 by <a href="#">harsh</a></p>
+  
+          <p>The Open Regulatory Compliance Working Group will assist open source participants with adhering to global regulatory requirements such as the EU's Cyber Resilience Act. </p>
+          <hr>
+          <p>he Eclipse Foundation has launched the Open Regulatory Compliance Working Group (ORC WG) to address evolving global regulations aimed at improving software quality and security.
+
+            The working group’s formation follows Eclipse’s initial partnering with the Apache Software Foundation and other open source organizations in April. Announced September 24, the initiative looks to support participants globally across the open source community, including developers, enterprises, industries, and open source foundations, in navigating and adhering to evolving regulatory frameworks. In particular, the working group, with members such as the Python Software Foundation and the Rust Foundation, plans on helping companies navigate European Union regulatory requirements such as the Cyber Resilience Act (CRA), along with EU AI and data sovereignty measures.
+            
+            CRA is a legal framework that describes cybersecurity requirements for hardware and software products with digital elements placed on the market of the EU. Plans call for the working group to engage with regulatory bodies and governments to enhance their understanding of the unique open source development model.
+            
+            “The Open Regulatory Compliance Working Group was created to bridge the gap between regulatory authorities and the open source ecosystem, ensuring organizations and developers can leverage open source technologies while remaining compliant with evolving global regulations,” said Eclipse Executive Director Mike Milinkovich, in a statement.
+            
+            The working group will formalize industry best practices and offer resources to help organizations navigate regulatory requirements across multiple jurisdictions. It also intends to assist government entities in providing greater legal certainty to the open source ecosystem and software supply chain. An overall objective is the elevation of software quality and security in open source projects.
+            
+            </p>
+          <hr>
+        
+        </article>
+        
+  
+       
+  
+        
+  
+      </div>
+  <!-- about -->
+      <div class="col-md-4 ">
+        <div class="position-sticky " style="top: 2rem; background-color:#767a5c10 ;">
+          <div class="container  ">
+          <div class="p-4 mb-3 bg-body-tertiary rounded mt-3 "  id="aboutpage">
+            <h4 class="fst-italic " style="background-color: #f8fbe292;">About</h4>
+            <p class="mb-0">Welcome to CyberTech, your go-to resource for the latest insights, trends, and practical advice in the world of cybersecurity. Whether you're an aspiring ethical hacker, a seasoned security professional, or someone keen to learn how to safeguard your digital life, this blog is designed for you..</p>
+          </div>
+           </div>
+  <!-- recent post -->
+          <div>
+            <h4 class="fst-italic" style="background-color:#f8fbe292;">Recent posts:</h4>
+            <ul class="list-unstyled">
+              <!-- first -->
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <image href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-ge961EidZCr0GSb_CLQiYwhAqXsf9rdu5S_k4E8ZFLl2SuwFAhO8NpbhmG3MagvwORfilmb8GUuMCL7ugn1KDTK02GT0s5EnXMCjPmh0tv0c1EegXPLSKElVDih7IrkxuZy4vjWfdsgHFPFRLB5UvU7G6IgsqQ7N6vfUX7bZyOBVdNwlVQyWbQrbSQI/s728-rw-e365/MAIN.png" width="100%" height="100%" />
+                  </svg>
+                  
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">Chinese Hackers Infiltrate U.S. Internet Providers in Cyber Espionage Campaign</h6>
+                    <small class="text-body-secondary">September 26, 2024</small>
+                  </div>
+                </a>
+              </li>
+              <!-- second-->
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <image href="https://cdn1.expresscomputer.in/wp-content/uploads/2023/11/23153304/standard-quality-control-concept-m.jpg" width="100%" height="100%" />
+                  </svg>
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">Only one third of organisations run round-the-clock cybersecurity</h6>
+                    <small class="text-body-secondary">September 26, 2024</small>
+                  </div>
+                </a>
+              </li>
+              <!-- third -->
+               <% posts.forEach(post => { %>
+                
+              
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <image href="<%= post.image %>" width="100%" height="100%" />
+                  </svg>
+                  <div class="col-lg-8">
+                    <h6 class="mb-0"><%= post.title  %></h6>
+                    <small class="text-body-secondary"><%= post.date  %></small>
+                  </div>
+                </a>
+              </li>
+
+          <%   }); %>
+            </ul>
+          </div>
+  
+
+  
+         
+        </div>
+      </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+    </ul>
+  </footer>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
